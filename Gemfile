@@ -7,3 +7,5 @@ end
 
 gem 'puma'
 gem 'sinatra'
+gem 'sass'
+gem 'haml'

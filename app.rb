@@ -3,8 +3,10 @@
 require 'sinatra'
 
 class PayPallApp < Sinatra::Base
+  set :haml, format: :html5
+
   get '/' do
-    return 'It works!'
+    haml :index
   end
 end
 
