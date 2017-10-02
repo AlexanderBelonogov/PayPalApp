@@ -1,17 +1,4 @@
-%header.header
-  .inner
-    %h1
-      %a{href: '/'} poprey
-    %nav.nav
-      %ul
-        %li
-          %a{href: '/works'} Why It Works?
-        %li
-          %a{href: '/help'} Help
-        %li.active
-          %a{href: '/contact'} Contact
-        %li
-          %a{href: '/rules'} Terms of Service
+=haml :header
 %main.main
   .inner
     .message
@@ -21,7 +8,4 @@
         %input{type: 'text', name: 'email', placeholder: 'Email'}
         %textarea{name: 'message', placeholder: 'Message'}
         %button{type: 'button'} Send message
-%footer
-  .inner
-    .footer-button
-      %a{href: '/'} Go to shopping
+=haml :footer
