@@ -1,9 +1,13 @@
 !!!
-%html
+%html{ lang: 'en' }
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
-    %title Buy Instagram Like and Followers
-    %link{href: "stylesheets/application.css", rel: "stylesheet"}
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv' => 'x-ua-compatible', content: 'ie=edge' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no' }
+    %link{rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}
+    %title= @title || 'Buy Instagram Like and Followers'
+    %link{href: "stylesheets/application.css", rel: "stylesheet", media: 'all'}
+    %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'}
     %script{src: "javascripts/application.js", type: "text/javascript"}
   %body
-    = yield
+    .page= yield
