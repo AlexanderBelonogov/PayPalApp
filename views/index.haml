@@ -13,6 +13,7 @@
       %link{href: 'stylesheets/1024.css', media: 'screen', rel: 'stylesheet'}
       %link{href: 'stylesheets/640.css', media: 'screen', rel: 'stylesheet'}
       %link{href: 'stylesheets/320.css', media: 'screen', rel: 'stylesheet'}
+    %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'}
     %script{src: 'javascripts/application.js', type: 'text/javascript'}
   %body
     .opacity
@@ -32,7 +33,7 @@
                   %label{for: 'check-radio-tools-two'}
                     %span.label-followers Followers
 
-            .block-fade-instagram
+            #likes.block-fade-instagram
               .block-pay-card
                 %span.block-likes
                   %img{src: 'images/minus-symbol-(1).svg'}
@@ -94,7 +95,7 @@
                 %span.btn-pay
                   Buy Now
 
-            .block-fade-followers
+            #followers.block-fade-followers
               .block-pay-card.not-clickable
                 %span.block-likes 10 F
                 %span.block-cost-pay

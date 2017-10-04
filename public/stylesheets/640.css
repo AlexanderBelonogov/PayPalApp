@@ -586,7 +586,7 @@ input[type="radio"]#check-radio-tools-two:checked + label span {
 	float: right;
 	width: 16px;
 	height: 16px;
-	background: url(img/icon-close.png) no-repeat;
+	background: url(/images/icon-close.png) no-repeat;
 	/*-webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
