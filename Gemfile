@@ -5,7 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+github 'sinatra/sinatra' do
+  gem 'sinatra-contrib'
+end
+
 gem 'puma'
 gem 'sinatra'
 gem 'sass'
 gem 'haml'
+gem 'ianfleeton-paypal-express', github: 'ianfleeton/paypal-express', require: 'paypal/express'
+
+gem 'pry'

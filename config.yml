@@ -1,0 +1,10 @@
+development: &default
+  paypal:
+    username: 'acebel-facilitator_api1.mail.ru'
+    password:  'CQV76EZNG6FB772L'
+    signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31AbWHbJGMIBB2fKDd.UMONosGMwNP'
+production:
+  paypal:
+    username: Settings
+    password: Settings.paypal.password,
+    signature: Settings
