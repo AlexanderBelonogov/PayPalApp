@@ -77,6 +77,7 @@ class PayPallApp < Sinatra::Base
   get '/success' do
     required_params :token, :PayerID, :amount
     PaypalService.checkout(token: params[:token], payer_id: params[:PayerID], amount: params[:amount], description: params[:description])
+    @title = 'After Payment'
     haml :success
   end
 
