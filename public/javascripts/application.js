@@ -10,8 +10,11 @@ $(document).ready(function() {
     $('#followers').show();
   });
 
-  $('#likes .btn-pay').on('click', function() {
-    $('.popup').show();
+  $('#likes .btn-pay').on('click', function(e) {
+    var $popup = $('.popup');
+    var amount = $(e.target).parent().find('.cost').text();
+    $popup.find('.amount').val(amount);
+    $popup.show();
   });
 
   $('#likes .btn-pay-2').on('click', function() {

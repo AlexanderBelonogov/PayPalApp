@@ -255,6 +255,8 @@
       .block-form-popup
         .icon-close
         %form#popup_form.form-popup{action: 'pay', method: 'post'}
+          %input.amount{type: 'hidden', name: 'amount', value: nil}
+          %input{type: 'hidden', name: 'type', value: 'likes'}
           %input#form_like_plan{name: 'plan', type: 'hidden'}
           .block-input-form-popup.one
             .null-block.info

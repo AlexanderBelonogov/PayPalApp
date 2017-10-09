@@ -5,18 +5,22 @@ require 'pry'
 require 'paypal'
 require 'sinatra/config_file'
 require 'sinatra/required_params'
+require 'sinatra/cookies'
+require 'sysrandom/securerandom'
+require './services/pay_pal_service'
 require 'sinatra/custom_logger'
 require 'logger'
-require './services/pay_pal_service'
 
 class PayPallApp < Sinatra::Base
   register Sinatra::ConfigFile
   helpers Sinatra::RequiredParams
+  helpers Sinatra::Cookies
   helpers Sinatra::CustomLogger
   DESCRIPTION = 'Transaction to get %s %s for %s url'
 
   set :haml, format: :html5
   set :logging, true
+  set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
 
   configure :development, :production do
     logger = Logger.new(File.open("#{root}/log/#{environment}.log", 'a+'))
@@ -63,7 +67,7 @@ class PayPallApp < Sinatra::Base
     params[:type] ||= 'followers'
     params[:count] ||= 3
     description = DESCRIPTION % [*params.values_at(:count, :type), 3]
-    success_url = "#{request.base_url}/success?amount=#{params[:amount]}&type=#{params[:type]}&count=#{params[:count]}&description=#{description}"
+    success_url = "#{request.base_url}/success"
     cancel_url = request.base_url
     attr = {
       amount: params[:amount],
@@ -71,12 +75,14 @@ class PayPallApp < Sinatra::Base
       success_url: success_url,
       cancel_url: cancel_url
     }
-    redirect to PaypalService.authorize(attr)
+    redirect to PaypalService.authorize(attr) { |token| cookies[token] = attr.to_json }
   end
 
   get '/success' do
-    required_params :token, :PayerID, :amount
-    PaypalService.checkout(token: params[:token], payer_id: params[:PayerID], amount: params[:amount], description: params[:description])
+    required_params :token, :PayerID
+    token = params[:token]
+    amount, description = JSON.parse(cookies[token]).values_at('amount', 'description')
+    PaypalService.checkout(token: token, payer_id: params[:PayerID], amount: amount, description: description)
     @title = 'After Payment'
     haml :success
   end

@@ -20,6 +20,7 @@ class PaypalService
       payment_request = payment_request!(amount: amount, currency: currency, description: description)
 
       response        = request.setup(payment_request, success_url, cancel_url, paypal_options)
+      yield response.token
       response.redirect_uri
     end
 
