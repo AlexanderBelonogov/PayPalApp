@@ -64,7 +64,7 @@ class PayPallApp < Sinatra::Base
     params[:count] ||= 3
     description = DESCRIPTION % [*params.values_at(:count, :type), 3]
     success_url = "#{request.base_url}/success?amount=#{params[:amount]}&type=#{params[:type]}&count=#{params[:count]}&description=#{description}"
-    cancel_url = request.base_url + '/cancel'
+    cancel_url = request.base_url
     attr = {
       amount: params[:amount],
       description: description,
@@ -78,10 +78,6 @@ class PayPallApp < Sinatra::Base
     required_params :token, :PayerID, :amount
     PaypalService.checkout(token: params[:token], payer_id: params[:PayerID], amount: params[:amount], description: params[:description])
     haml :success
-  end
-
-  get '/cancel' do
-
   end
 end
 
