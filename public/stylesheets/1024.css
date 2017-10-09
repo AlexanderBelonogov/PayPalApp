@@ -226,6 +226,11 @@ input[type="radio"]#check-radio-tools-two:checked + label span {
 	background: #aaaaaa;
 }
 
+.btn-pay.sold {
+  pointer-events: none;
+  background: #7bc7e3;
+}
+
 .btn-pay {
 	cursor: pointer;
 	float: left;
@@ -662,7 +667,15 @@ input[type="radio"]#check-radio-tools-two:checked + label span {
     color: #7f7f7f;
     font-family: 'RobotoRegular', sans-serif;
     font-weight: 400;
-	border-bottom: 1px solid #29ABE2;
+  border-bottom: 1px solid #29ABE2;
+}
+
+.block-input-form-popup.error .important {
+  display: block;
+}
+
+.block-input-form-popup.error .bg-input-form-popup {
+	border-bottom: 1px solid #d80027;
 }
 
 /*.bg-input-form-popup:hover,*/

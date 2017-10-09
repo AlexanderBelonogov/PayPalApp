@@ -83,7 +83,7 @@
             %span.block-cost-pay
               %span.cost 0.00
               %span $
-            %span.btn-pay
+            %span.btn-pay.sold
               Sold
           .block-pay-card
             %span.block-likes 100 F
@@ -218,7 +218,7 @@
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup.one.validation{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required'}
+        %input.bg-input-form-popup.one.validation{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
       .block-input-form-popup.mail
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
@@ -242,9 +242,9 @@
       %input.amount{type: 'hidden', name: 'amount', value: nil}
       %input{type: 'hidden', name: 'type', value: 'likes'}
       %input#form_like_plan{name: 'plan', type: 'hidden'}
-      .block-input-form-popup
+      .block-input-form-popup.first-block
         .null-block.info
-          %img.icon-info.add-field{src: 'images/add-(2).svg'}
+          %img.icon-info#add-icon.add-field{src: 'images/add-(2).svg'}
           %img.icon-info.important{src: 'images/icon-(17).svg'}
         %input.bg-input-form-popup{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
       .block-input-form-popup.mail

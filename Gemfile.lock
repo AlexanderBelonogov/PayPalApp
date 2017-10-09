@@ -40,7 +40,6 @@ GEM
     concurrent-ruby (1.0.5)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
-    ffi (1.9.18)
     haml (5.0.3)
       temple (>= 0.8.0)
       tilt
@@ -60,18 +59,10 @@ GEM
       method_source (~> 0.9.0)
     puma (3.10.0)
     rack (2.0.3)
-    rb-fsevent (0.10.2)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    sass (3.5.1)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sysrandom (1.0.5)
     temple (0.8.0)
     thread_safe (0.3.6)
@@ -90,10 +81,9 @@ DEPENDENCIES
   ianfleeton-paypal-express!
   pry
   puma
-  sass
   sinatra
   sinatra-contrib!
   sysrandom
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.3
