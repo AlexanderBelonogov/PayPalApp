@@ -10,9 +10,7 @@
     - if @title
       %link{href: 'stylesheets/application.css', rel: 'stylesheet', media: 'all'}
     - else
-      %link{href: 'stylesheets/1024.css', media: 'screen', rel: 'stylesheet'}
-      %link{href: 'stylesheets/640.css', media: 'screen', rel: 'stylesheet'}
-      %link{href: 'stylesheets/320.css', media: 'screen', rel: 'stylesheet'}
+      =haml :media_styles
     %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'}
     %script{src: 'javascripts/application.js', type: 'text/javascript'}
   %body
