@@ -11,7 +11,6 @@ end
 
 gem 'puma'
 gem 'sinatra'
-gem 'sass'
 gem 'haml'
 gem 'ianfleeton-paypal-express', github: 'ianfleeton/paypal-express', require: 'paypal/express'
 

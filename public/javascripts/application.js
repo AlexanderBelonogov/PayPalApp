@@ -29,16 +29,15 @@ $(document).ready(function() {
     $('.popup, .popup-2, .popup-followers').hide();
   });
 
-  $('img').on('click', function() {
-    var nextBlockNumber = parseInt(this.getAttribute('data-next'));
-    $('#popup_form .block-' + (nextBlockNumber - 1)).after(
-      $('<div/>').addClass('block-input-form-popup block-' + nextBlockNumber).append(
-        $('<div/>').addClass('null-block info icon-block').append(
-          $('<img/>').addClass('icon-info').attr('src', 'images/add-(2).svg').attr('data-next', nextBlockNumber)
-        )
-      ).append(
-        $('<input/>').attr({ type: 'text', minlength: '3', class: 'bg-input-form-popup', name: 'link_inst[]', placeholder: 'Link to photo or video' })
-      ).show()
+  $('#popup_form .add-field').on('click', function() {
+    $('#popup_form .block-input-form-popup:not(.mail)').append(
+      "<div class='block-input-form-popup'>" +
+        "<div class='null-block info'>" +
+          "<img class='icon-info add-field' src='images/add-(2).svg'/>" +
+          "<img class='icon-info important' src='images/icon-(17).svg'/>" +
+        "</div>" +
+        "<input class='bg-input-form-popup' placeholder='Link to photo or video', minlength='3', name='link_inst[]', type='text'/>" +
+      "</div>"
     );
   });
 
