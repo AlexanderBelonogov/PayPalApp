@@ -84,7 +84,7 @@ class PayPallApp < Sinatra::Base
     amount, description = JSON.parse(cookies[token]).values_at('amount', 'description')
     PaypalService.checkout(token: token, payer_id: params[:PayerID], amount: amount, description: description)
     @title = 'After Payment'
-    haml :success
+    haml :success, layout: false
   end
 end
 
