@@ -37,8 +37,9 @@ $(document).ready(function() {
       popupLikes.remove();
       $('#add-icon').addClass('add-field');
     }
-    $('#popup_mail, #popup_mail_followers').val('');
-    $('.block-input-form-popup.mail').removeClass('error')
+    $('#popup_form .reset, #popup_form_2 .reset, #popup_form_followers .reset').val('');
+    $('.block-input-form-popup').removeClass('error');
+    $('#popup_form .icon-info:not(.important)').removeClass('hide');
   });
 
 // Add new input block for Likes (link to photo or video)
@@ -67,7 +68,11 @@ $(document).ready(function() {
   $('#popup_send').on('click', function(e) {
     e.preventDefault();
     var form = $('#popup_form');
+    var inputs = form.find('.first-block .bg-input-form-popup, .additional-block .bg-input-form-popup');
     validateMailById('#popup_form', '#popup_mail');
+    $.each(inputs, function(index, input) {
+      validateLink($(input));
+    });
     if (!form.find('.error').length) form.submit();
   });
 
@@ -95,6 +100,11 @@ $(document).ready(function() {
     validateName();
   });
 
+  // validate links form on focusout for Link
+  $(document).on('focusout', '#popup_form .additional-block .bg-input-form-popup, #popup_form .first-block .bg-input-form-popup', function() {
+    validateLink($(this));
+  });
+
   function validateMailById(formId, inputId) {
     var patt = /^.+@.+[.].{2,}$/i;
     if (patt.test($.trim($(inputId).val()))) {
@@ -107,6 +117,7 @@ $(document).ready(function() {
 
 // For Follower popup
   function validateName() {
+    // TODO: how to validate?
     if ($.trim($('#link_inst_followers').val()).length) {
       $('#popup_form_followers .block-input-form-popup.first').removeClass('error');
       return true;
@@ -115,7 +126,22 @@ $(document).ready(function() {
     }
   }
 
+// validate link field
+  function validateLink(input) {
+    // TODO: how to validate?
+    var parent = input.parent('.block-input-form-popup');
+    if ($.trim(input.val()).length) {
+      parent.removeClass('error');
+      parent.find('.icon-info:not(.important)').removeClass('hide');
+    } else {
+      parent.addClass('error');
+      parent.find('.icon-info:not(.important)').addClass('hide');
+    }
+  }
+
+// return true if can add new field
   function canAddNewLinkField(inputs) {
+    var result = false;
     $.each(inputs, function(index, input) {
       if (!$(input).val().length) {
         return result = true;

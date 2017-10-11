@@ -214,15 +214,15 @@
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup.one{minlength: '3', name: 'url', placeholder: 'Instagram Username', required: 'required'}
+        %input.bg-input-form-popup.one.reset{minlength: '3', name: 'url', placeholder: 'Instagram Username', required: 'required'}
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup.one.validation{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
+        %input.bg-input-form-popup.one.validation.reset{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
       .block-input-form-popup.mail
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup{name: 'email', placeholder: 'Email', required: 'required', type: 'email'}
+        %input.bg-input-form-popup.reset{name: 'email', placeholder: 'Email', required: 'required', type: 'email'}
       %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
       %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
       %input#popup_send_2{name: 'popup_submit', type: 'submit'}
@@ -246,11 +246,11 @@
         .null-block.info
           %img.icon-info#add-icon.add-field{src: 'images/add-(2).svg'}
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
+        %input.bg-input-form-popup.reset{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
       .block-input-form-popup.mail
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input#popup_mail.bg-input-form-popup{placeholder: 'Email', name: 'popup_mail', type: 'text'}
+        %input#popup_mail.bg-input-form-popup.reset{placeholder: 'Email', name: 'popup_mail', type: 'text'}
       %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
       %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
       %input#popup_send{name: 'popup_submit', type: 'submit'}
@@ -264,11 +264,11 @@
       .block-input-form-popup.first
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input#link_inst_followers.bg-input-form-popup.one{placeholder: 'Instagram Username', name: 'link_inst_followers', type: 'text'}
+        %input#link_inst_followers.bg-input-form-popup.one.reset{placeholder: 'Instagram Username', name: 'link_inst_followers', type: 'text'}
       .block-input-form-popup.mail
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input#popup_mail_followers.bg-input-form-popup{placeholder: 'Email', name: 'popup_mail_followers', type: 'text'}
+        %input#popup_mail_followers.bg-input-form-popup.reset{placeholder: 'Email', name: 'popup_mail_followers', type: 'text'}
       %input#popup_name_card_followers.bg-input-form-popup{name: 'popup_name_card_followers', type: 'hidden'}
       %input#popup_link_pay_followers.bg-input-form-popup{name: 'popup_link_pay_followers', type: 'hidden'}
       %input#popup_send_followers{name: 'popup_submit_followers', type: 'submit'}

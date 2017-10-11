@@ -779,3 +779,7 @@ input[type="radio"]#check-radio-tools-two:checked + label span {
 }
 
 }
+
+.hide {
+  display: none;
+}
