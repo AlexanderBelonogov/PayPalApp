@@ -1,332 +1,274 @@
-!!!
-%html{lang: 'eng'}
-  %head
-    %meta{ charset: 'utf-8' }
-    %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
-    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no' }
-    %link{rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}
-    %title= @title || 'Buy Instagram Like and Followers'
-    %link{href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', rel: 'stylesheet'}
-    - if @title
-      %link{href: 'stylesheets/application.css', rel: 'stylesheet', media: 'all'}
-    - else
-      =haml :media_styles
-    %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'}
-    %script{src: 'javascripts/application.js', type: 'text/javascript'}
-  %body
-    .opacity
-      .all-center-block
-        .center-block
-          .left-center-block
-            %span.header-content-center
-              Instagram
-            .block-line-block-check-box-tools
-              .line-block-check-box-tools
-                .block-checkbox-dec-tools
-                  %input#check-radio-tools{checked: 'checked', name: 'radio-tools', type: 'radio'}
-                  %label{for: 'check-radio-tools'}
-                    %span.label-like Likes
-                .block-checkbox-dec-tools-two
-                  %input#check-radio-tools-two{name: 'radio-tools', type: 'radio'}
-                  %label{for: 'check-radio-tools-two'}
-                    %span.label-followers Followers
+.opacity
+  .all-center-block
+    .center-block
+      .left-center-block
+        %span.header-content-center
+          Instagram
+        .block-line-block-check-box-tools
+          .line-block-check-box-tools
+            .block-checkbox-dec-tools
+              %input#check-radio-tools{checked: 'checked', name: 'radio-tools', type: 'radio'}
+              %label{for: 'check-radio-tools'}
+                %span.label-like Likes
+            .block-checkbox-dec-tools-two
+              %input#check-radio-tools-two{name: 'radio-tools', type: 'radio'}
+              %label{for: 'check-radio-tools-two'}
+                %span.label-followers Followers
 
-            #likes.block-fade-instagram
-              .block-pay-card
-                %span.block-likes
-                  %img{src: 'images/minus-symbol-(1).svg'}
-                  %span#autolike_plan 1 000
-                  %img{src: 'images/plus-button.svg', style: 'padding-left: 16px;'}
-                  %span.auto-likes{style: 'text-align: center; color: #7F7F7F; font-size: 14px;'} Auto-Likes
-                %span.block-cost-pay
-                  %span#autolike_cost.cost 2.90
-                  %span $
-                %span.btn-pay-2
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 200 Likes
-                %span.block-cost-pay
-                  %span.cost 0.80
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 500 Likes
-                %span.block-cost-pay
-                  %span.cost 1.50
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 1 000 Likes
-                %span.block-cost-pay
-                  %span.cost 2.80
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 2 000 Likes
-                %span.block-cost-pay
-                  %span.cost 4.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 5 000 Likes
-                %span.block-cost-pay
-                  %span.cost 9.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 10 000 Likes
-                %span.block-cost-pay
-                  %span.cost 17.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 20 000 Likes
-                %span.block-cost-pay
-                  %span.cost 29.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
+        #likes.block-fade-instagram
+          .block-pay-card
+            %span.block-likes
+              %img{src: 'images/minus-symbol-(1).svg'}
+              %span#autolike_plan 1 000
+              %img{src: 'images/plus-button.svg', style: 'padding-left: 16px;'}
+              %span.auto-likes{style: 'text-align: center; color: #7F7F7F; font-size: 14px;'} Auto-Likes
+            %span.block-cost-pay
+              %span#autolike_cost.cost 2.90
+              %span $
+            %span.btn-pay-2
+              Buy Now
+          .block-pay-card
+            %span.block-likes 200 Likes
+            %span.block-cost-pay
+              %span.cost 0.80
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 500 Likes
+            %span.block-cost-pay
+              %span.cost 1.50
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 1 000 Likes
+            %span.block-cost-pay
+              %span.cost 2.80
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 2 000 Likes
+            %span.block-cost-pay
+              %span.cost 4.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 5 000 Likes
+            %span.block-cost-pay
+              %span.cost 9.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 10 000 Likes
+            %span.block-cost-pay
+              %span.cost 17.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 20 000 Likes
+            %span.block-cost-pay
+              %span.cost 29.90
+              %span $
+            %span.btn-pay
+              Buy Now
 
-            #followers.block-fade-followers
-              .block-pay-card.not-clickable
-                %span.block-likes 10 F
-                %span.block-cost-pay
-                  %span.cost 0.00
-                  %span $
-                %span.btn-pay
-                  Sold
-              .block-pay-card
-                %span.block-likes 100 F
-                %span.block-cost-pay
-                  %span.cost 0.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 250 F
-                %span.block-cost-pay
-                  %span.cost 1.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 500 F
-                %span.block-cost-pay
-                  %span.cost 3.20
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 1 000 F
-                %span.block-cost-pay
-                  %span.cost 5.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 2 000 F
-                %span.block-cost-pay
-                  %span.cost 9.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 5 000 F
-                %span.block-cost-pay
-                  %span.cost 23.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
-              .block-pay-card
-                %span.block-likes 10 000 F
-                %span.block-cost-pay
-                  %span.cost 39.90
-                  %span $
-                %span.btn-pay
-                  Buy Now
+        #followers.block-fade-followers
+          .block-pay-card.not-clickable
+            %span.block-likes 10 F
+            %span.block-cost-pay
+              %span.cost 0.00
+              %span $
+            %span.btn-pay.sold
+              Sold
+          .block-pay-card
+            %span.block-likes 100 F
+            %span.block-cost-pay
+              %span.cost 0.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 250 F
+            %span.block-cost-pay
+              %span.cost 1.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 500 F
+            %span.block-cost-pay
+              %span.cost 3.20
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 1 000 F
+            %span.block-cost-pay
+              %span.cost 5.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 2 000 F
+            %span.block-cost-pay
+              %span.cost 9.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 5 000 F
+            %span.block-cost-pay
+              %span.cost 23.90
+              %span $
+            %span.btn-pay
+              Buy Now
+          .block-pay-card
+            %span.block-likes 10 000 F
+            %span.block-cost-pay
+              %span.cost 39.90
+              %span $
+            %span.btn-pay
+              Buy Now
 
-            .block-description
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/give-money-(1).svg'}
-                %span.text-description
-                  Auto Start
-                %p.text-description2
-                  The order will be processed automatically after purchasing .
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/runer-silhouette-running-fast.svg'}
-                %span.text-description
-                  Refund
-                %p.text-description2
-                  Return of funds in case of dissatisfaction with our services.
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/quality.svg'}
-                %span.text-description
-                  Fast and Quality
-                %p.text-description2
-                  Gradual, but at the same time, fast implementation will not attract anyone's attention.
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/24-hours-support.svg'}
-                %span.text-description
-                  Support
-                %p.text-description2
-                  Do you have any questions? Please contact us, we will gladly answer.
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/security-on.svg'}
-                %span.text-description
-                  Security
-                %p.text-description2
-                  We do not need access to the Instagram profile, only a link to it or a post.
-              .one-of-description
-                .parent
-                  %div
-                    %img.svg{src: 'images/free-sticker.svg'}
-                %span.text-description
-                  Free Test
-                %p.text-description2
-                  One time you can see the quality and speed of our services without payment and obligations.
+        .block-description
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/give-money-(1).svg'}
+            %span.text-description
+              Auto Start
+            %p.text-description2
+              The order will be processed automatically after purchasing .
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/runer-silhouette-running-fast.svg'}
+            %span.text-description
+              Refund
+            %p.text-description2
+              Return of funds in case of dissatisfaction with our services.
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/quality.svg'}
+            %span.text-description
+              Fast and Quality
+            %p.text-description2
+              Gradual, but at the same time, fast implementation will not attract anyone's attention.
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/24-hours-support.svg'}
+            %span.text-description
+              Support
+            %p.text-description2
+              Do you have any questions? Please contact us, we will gladly answer.
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/security-on.svg'}
+            %span.text-description
+              Security
+            %p.text-description2
+              We do not need access to the Instagram profile, only a link to it or a post.
+          .one-of-description
+            .parent
+              %div
+                %img.svg{src: 'images/free-sticker.svg'}
+            %span.text-description
+              Free Test
+            %p.text-description2
+              One time you can see the quality and speed of our services without payment and obligations.
 
-            .block-info
-              .binfo-inner
-                %p Buy Instagram Followers or Buy Instagram Likes if you have any doubts take Free Instagram Followers.
+        .block-info
+          .binfo-inner
+            %p Buy Instagram Followers or Buy Instagram Likes if you have any doubts take Free Instagram Followers.
 
-        .footer
-          .footer-inner
-            .footer-logo
-              %span Popreu
-            .footer-menu
-              %ul
-                %li
-                  %a{href: '/works'} Why It Works?
-                %li
-                  %a{href: '/help'} Help
-                %li
-                  %a{href: '/contact'} Contact
-                %li
-                  %a{href: '/rules'} Terms of Service
+    .footer
+      .footer-inner
+        .footer-logo
+          %span Popreu
+        .footer-menu
+          %ul
+            %li
+              %a{href: '/works'} Why It Works?
+            %li
+              %a{href: '/help'} Help
+            %li
+              %a{href: '/contact'} Contact
+            %li
+              %a{href: '/rules'} Terms of Service
 
-    .popup-2
-      .padding-top
-      .padding-left
-      .block-form-popup
-        .icon-close
-        %form#popup_form_2.form-popup{method: 'post'}
-          %input#form_autolike_plan{name: 'plan', type: 'hidden', value: '0'}
-          .block-input-form-popup.validation-block
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input.bg-input-form-popup.one{minlength: '3', name: 'url', placeholder: 'Instagram Username', required: 'required'}
-          .block-input-form-popup.validation-block
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input.bg-input-form-popup.one.validation{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required'}
-          .block-input-form-popup.mail
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input.bg-input-form-popup{name: 'email', placeholder: 'Email', required: 'required', type: 'email'}
-          %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
-          %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
-          %input#popup_send_2{name: 'popup_submit', type: 'submit'}
-          %p.notification
-            You buy
-            %span#form_autolike_count_likes 1000
-            likes on each of the
-            %span#form_autolike_count_photos 0
-            following photos that you will add to your profile
+.popup-2
+  .padding-top
+  .padding-left
+  .block-form-popup
+    .icon-close
+    %form#popup_form_2.form-popup{method: 'post'}
+      %input#form_autolike_plan{name: 'plan', type: 'hidden', value: '0'}
+      .block-input-form-popup.validation-block
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input.bg-input-form-popup.one.reset{minlength: '3', name: 'url', placeholder: 'Instagram Username', required: 'required'}
+      .block-input-form-popup.validation-block
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input.bg-input-form-popup.one.validation.reset{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
+      .block-input-form-popup.mail
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input.bg-input-form-popup.reset{name: 'email', placeholder: 'Email', required: 'required', type: 'email'}
+      %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
+      %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
+      %input#popup_send_2{name: 'popup_submit', type: 'submit'}
+      %p.notification
+        You buy
+        %span#form_autolike_count_likes 1000
+        likes on each of the
+        %span#form_autolike_count_photos 0
+        following photos that you will add to your profile
 
-    .popup
-      .padding-top
-      .padding-left
-      .block-form-popup
-        .icon-close
-        %form#popup_form.form-popup{action: 'pay', method: 'post'}
-          %input.amount{type: 'hidden', name: 'amount', value: nil}
-          %input{type: 'hidden', name: 'type', value: 'likes'}
-          %input#form_like_plan{name: 'plan', type: 'hidden'}
-          .block-input-form-popup.one
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst.bg-input-form-popup.one{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.two
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_two.bg-input-form-popup.two{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.three
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_three.bg-input-form-popup.three{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.four
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_four.bg-input-form-popup.four{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.five
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_five.bg-input-form-popup.five{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.six
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_six.bg-input-form-popup.six{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.seven
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_seven.bg-input-form-popup.seven{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.eight
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_eight.bg-input-form-popup.eight{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.nine
-            .null-block.info
-              %img.icon-info.add-nine{src: 'images/add-(2).svg'}
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input.bg-input-form-popup.nine{placeholder: 'Link to photo or video', id: 'link_inst[]', minlength: '3', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.ten
-            %input#link_inst_ten.bg-input-form-popup.ten{placeholder: 'Link to photo or video', name: 'link_inst[]', type: 'text'}
-          .block-input-form-popup.mail
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#popup_mail.bg-input-form-popup{placeholder: 'Email', name: 'popup_mail', type: 'text'}
-          %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
-          %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
-          %input#popup_send{name: 'popup_submit', type: 'submit'}
+.popup
+  .padding-top
+  .padding-left
+  .block-form-popup
+    .icon-close
+    %form#popup_form.form-popup{action: 'pay', method: 'post'}
+      %input.amount{type: 'hidden', name: 'amount', value: nil}
+      %input{type: 'hidden', name: 'type', value: 'likes'}
+      %input#form_like_plan{name: 'plan', type: 'hidden'}
+      .block-input-form-popup.first-block
+        .null-block.info
+          %img.icon-info#add-icon.add-field{src: 'images/add-(2).svg'}
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input.bg-input-form-popup.reset{placeholder: 'Link to photo or video', minlength: '3', name: 'link_inst[]', type: 'text'}
+      .block-input-form-popup.mail
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input#popup_mail.bg-input-form-popup.reset{placeholder: 'Email', name: 'popup_mail', type: 'text'}
+      %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
+      %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
+      %input#popup_send{name: 'popup_submit', type: 'submit'}
 
-    .popup-followers
-      .padding-top
-      .padding-left
-      .block-form-popup
-        .icon-close
-        %form#popup_form_followers.form-popup{action: 'pay', method: 'post'}
-          .block-input-form-popup.first
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#link_inst_followers.bg-input-form-popup.one{placeholder: 'Instagram Username', name: 'link_inst_followers', type: 'text'}
-          .block-input-form-popup.mail
-            .null-block.info
-              %img.icon-info.important{src: 'images/icon-(17).svg'}
-            %input#popup_mail_followers.bg-input-form-popup{placeholder: 'Email', name: 'popup_mail_followers', type: 'text'}
-          %input#popup_name_card_followers.bg-input-form-popup{name: 'popup_name_card_followers', type: 'hidden'}
-          %input#popup_link_pay_followers.bg-input-form-popup{name: 'popup_link_pay_followers', type: 'hidden'}
-          %input#popup_send_followers{name: 'popup_submit_followers', type: 'submit'}
+.popup-followers
+  .padding-top
+  .padding-left
+  .block-form-popup
+    .icon-close
+    %form#popup_form_followers.form-popup{action: 'pay', method: 'post'}
+      .block-input-form-popup.first
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input#link_inst_followers.bg-input-form-popup.one.reset{placeholder: 'Instagram Username', name: 'link_inst_followers', type: 'text'}
+      .block-input-form-popup.mail
+        .null-block.info
+          %img.icon-info.important{src: 'images/icon-(17).svg'}
+        %input#popup_mail_followers.bg-input-form-popup.reset{placeholder: 'Email', name: 'popup_mail_followers', type: 'text'}
+      %input#popup_name_card_followers.bg-input-form-popup{name: 'popup_name_card_followers', type: 'hidden'}
+      %input#popup_link_pay_followers.bg-input-form-popup{name: 'popup_link_pay_followers', type: 'hidden'}
+      %input#popup_send_followers{name: 'popup_submit_followers', type: 'submit'}
