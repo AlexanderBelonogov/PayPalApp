@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  var count = ['1 000', '2 000', '5 000', '10 000', '20 000', '50 000', '100 000']
+  var price = ['2.90', '5.20', '10.90', '18.90', '32.90', '59.90', '109.90']
+
 // Show Followers or Likes block
   $('#check-radio-tools').on('change', function() {
     $('#likes').show();
@@ -16,6 +19,7 @@ $(document).ready(function() {
     var $popup = $('.popup');
     var amount = $(e.target).parent().find('.cost').text();
     $popup.find('.amount').val(amount);
+    $('#popup_send').val('Pay ' + amount + ' USD');
     $popup.show();
   });
 
@@ -25,7 +29,9 @@ $(document).ready(function() {
   });
 
 // Show Followers popup
-  $('#followers .btn-pay').on('click', function() {
+  $('#followers .btn-pay').on('click', function(e) {
+    var amount = $(e.target).parent().find('.cost').text();
+    $('#popup_send_followers').val('Pay ' + amount + ' USD');
     $('.popup-followers').show();
   });
 
@@ -104,6 +110,35 @@ $(document).ready(function() {
   $(document).on('focusout', '#popup_form .additional-block .bg-input-form-popup, #popup_form .first-block .bg-input-form-popup', function() {
     validateLink($(this));
   });
+
+  // click on minus button for likes
+  $(document).on('click', '#minus-button', function() {
+    var step = parseInt(this.getAttribute('data-step')) - 2;
+    if (step < 0) return;
+    changeAutoLikes(step);
+  });
+
+  // click on plus button for likes
+  $(document).on('click', '#plus-button', function() {
+    var step = parseInt(this.getAttribute('data-step'));
+    if (step > 6) return;
+    changeAutoLikes(step);
+  });
+
+  // change count of photos in popup message
+  $(document).on('focusout', '#count-of-photo', function() {
+    var value = $(this).val().length ? $(this).val() : 0;
+    $('#form_autolike_count_photos').text(value);
+  });
+// =================== FUNCTIONS ===================
+
+  function changeAutoLikes(step) {
+    $('#plus-button, #minus-button').attr('data-step', step + 1)
+    $('#autolike_plan').text(count[step]);
+    $('#autolike_cost').text(price[step]);
+    $('#form_autolike_count_likes').text(count[step]);
+    $('#popup_send_2').val('Pay ' + price[step] + ' USD');
+  }
 
   function validateMailById(formId, inputId) {
     var patt = /^.+@.+[.].{2,}$/i;

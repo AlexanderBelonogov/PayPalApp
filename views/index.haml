@@ -18,9 +18,9 @@
         #likes.block-fade-instagram
           .block-pay-card
             %span.block-likes
-              %img{src: 'images/minus-symbol-(1).svg'}
+              %img#minus-button{src: 'images/minus-symbol-(1).svg', 'data-step' => 1}
               %span#autolike_plan 1 000
-              %img{src: 'images/plus-button.svg', style: 'padding-left: 16px;'}
+              %img#plus-button{src: 'images/plus-button.svg', style: 'padding-left: 16px;', 'data-step' => 1}
               %span.auto-likes{style: 'text-align: center; color: #7F7F7F; font-size: 14px;'} Auto-Likes
             %span.block-cost-pay
               %span#autolike_cost.cost 2.90
@@ -218,14 +218,14 @@
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
-        %input.bg-input-form-popup.one.validation.reset{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
+        %input#count-of-photo.bg-input-form-popup.one.validation.reset{max: '99', min: '1', name: 'count', placeholder: 'Number of new photo (for example 5)', required: 'required', type: 'number'}
       .block-input-form-popup.mail
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
         %input.bg-input-form-popup.reset{name: 'email', placeholder: 'Email', required: 'required', type: 'email'}
       %input#popup_name_card.bg-input-form-popup{name: 'popup_name_card', type: 'hidden'}
       %input#popup_link_pay.bg-input-form-popup{name: 'popup_link_pay', type: 'hidden'}
-      %input#popup_send_2{name: 'popup_submit', type: 'submit'}
+      %input#popup_send_2{name: 'popup_submit', type: 'submit', value: 'Pay 2.90 USD'}
       %p.notification
         You buy
         %span#form_autolike_count_likes 1000
