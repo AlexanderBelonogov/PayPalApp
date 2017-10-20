@@ -261,6 +261,7 @@
   .block-form-popup
     .icon-close
     %form#popup_form_followers.form-popup{action: 'pay', method: 'post'}
+      %input{type: 'hidden', name: 'type', value: 'followers'}
       .block-input-form-popup.first
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}

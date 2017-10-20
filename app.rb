@@ -16,7 +16,7 @@ class PayPallApp < Sinatra::Base
   helpers Sinatra::RequiredParams
   helpers Sinatra::Cookies
   helpers Sinatra::CustomLogger
-  DESCRIPTION = 'Transaction to get %s %s for %s url'
+  DESCRIPTION = 'Transaction to get %s'
 
   set :haml, format: :html5
   set :logging, true
@@ -62,18 +62,13 @@ class PayPallApp < Sinatra::Base
     # params[:type]
     # like or follower
     # params[:count] - count followers or likes
-    required_params :amount, :type, :link_inst
-    params[:amount] ||= 2
-    params[:type] ||= 'followers'
-    params[:count] ||= 3
-    description = DESCRIPTION % [*params.values_at(:count, :type), 3]
-    success_url = "#{request.base_url}/success"
-    cancel_url = request.base_url
+    required_params :amount, :type
+
     attr = {
       amount: params[:amount],
-      description: description,
-      success_url: success_url,
-      cancel_url: cancel_url
+      description: DESCRIPTION % params[:type],
+      success_url: "#{request.base_url}/success",
+      cancel_url: request.base_url
     }
     redirect to PaypalService.authorize(attr) { |token| cookies[token] = attr.to_json }
   end

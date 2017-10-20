@@ -55,8 +55,7 @@ class PaypalService
           amount: amount
         }],
         custom_fields: {
-          CARTBORDERCOLOR: '000000',
-          LOGOIMG:         'https://pickapaw.com/images/pickapaw_logo.png'
+          CARTBORDERCOLOR: '000000'
         }
       )
     end
