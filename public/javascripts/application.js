@@ -130,7 +130,55 @@ $(document).ready(function() {
     var value = $(this).val().length ? $(this).val() : 0;
     $('#form_autolike_count_photos').text(value);
   });
+
+// Validate field for contact
+  // when try to submit form
+  $('#send-feedback').on('click', function(e) {
+    e.preventDefault();
+
+    var validEmail = validateContactEmail();
+    var validText = validateContactText();
+    if (validEmail && validText) $('#contact-form').submit();
+  });
+
+  // when focusout contact email
+  $(document).on('focusout', '#contact-email', function() {
+    validateContactEmail();
+  });
+
+  // when focusout contact text
+  $(document).on('focusout', '#contact-text', function() {
+    validateContactText();
+  });
+
 // =================== FUNCTIONS ===================
+
+  // is email field valid for contact?
+  function validateContactEmail() {
+    var emailWrapper = $('#contact-email');
+    var patt = /^.+@.+[.].{2,}$/i;
+
+    if (patt.test($.trim(emailWrapper.find('input').val()))) {
+      emailWrapper.removeClass('error-field');
+      return true;
+    } else {
+      emailWrapper.addClass('error-field');
+      return false;
+    }
+  }
+
+  // is text field valid for contact?
+  function validateContactText() {
+    var textWrapper = $('#contact-text');
+
+    if ($.trim(textWrapper.find('textarea').val()).length) {
+      textWrapper.removeClass('error-field');
+      return true;
+    } else {
+      textWrapper.addClass('error-field');
+      return false;
+    }
+  }
 
   function changeAutoLikes(step) {
     $('#plus-button, #minus-button').attr('data-step', step + 1)

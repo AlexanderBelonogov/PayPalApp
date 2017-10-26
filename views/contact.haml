@@ -4,8 +4,11 @@
     .message
       %p Instagram tries to prevent us from helping you in obtaining the desired, we are trying our best to make the high quality service, and we hope that the situation will return to normal soon and we will be able to continue working without such followers loss. Remember that within 30 days we will refund the lost amount of followers and soon it will be processed automatically. Thank you for your patience.
     .contacts-wrapper
-      %form{action: '/', method: 'post'}
-        %input{type: 'text', name: 'email', placeholder: 'Email'}
-        %textarea{name: 'message', placeholder: 'Message'}
-        %button{type: 'button'} Send message
+      %form#contact-form{action: '/', method: 'post'}
+        #contact-email.field-wrapper
+          %input{type: 'text', name: 'email', placeholder: 'Email'}
+          .error-icon
+        #contact-text.field-wrapper
+          %textarea{name: 'message', placeholder: 'Message'}
+        %button#send-feedback{type: 'button'} Send message
 =haml :footer
