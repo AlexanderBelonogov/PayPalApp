@@ -16,7 +16,7 @@ class PayPallApp < Sinatra::Base
   helpers Sinatra::RequiredParams
   helpers Sinatra::Cookies
   helpers Sinatra::CustomLogger
-  DESCRIPTION = 'Transaction to get %s'
+  DESCRIPTION = 'Transaction for adding %s to %s'
 
   set :haml, format: :html5
   set :logging, true
@@ -62,11 +62,14 @@ class PayPallApp < Sinatra::Base
     # params[:type]
     # like or follower
     # params[:count] - count followers or likes
-    required_params :amount, :type
+    required_params :amount, :type, :plan
+
+    prefix = params[:type] == 'followers' ? params[:link_inst_followers] : params[:link_inst].join(" ")
+    description = DESCRIPTION % [params[:plan], prefix]
 
     attr = {
       amount: params[:amount],
-      description: DESCRIPTION % params[:type],
+      description: description,
       success_url: "#{request.base_url}/success",
       cancel_url: request.base_url
     }

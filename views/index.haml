@@ -210,7 +210,7 @@
   .block-form-popup
     .icon-close
     %form#popup_form_2.form-popup{method: 'post'}
-      %input#form_autolike_plan{name: 'plan', type: 'hidden', value: '0'}
+      %input#form_autolike_plan.plan{name: 'plan', type: 'hidden', value: '0'}
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}
@@ -241,7 +241,7 @@
     %form#popup_form.form-popup{action: 'pay', method: 'post'}
       %input.amount{type: 'hidden', name: 'amount', value: nil}
       %input{type: 'hidden', name: 'type', value: 'likes'}
-      %input#form_like_plan{name: 'plan', type: 'hidden'}
+      %input#form_like_plan.plan{name: 'plan', type: 'hidden', value: nil}
       .block-input-form-popup.first-block
         .null-block.info
           %img.icon-info#add-icon.add-field{src: 'images/add-(2).svg'}
@@ -262,6 +262,8 @@
     .icon-close
     %form#popup_form_followers.form-popup{action: 'pay', method: 'post'}
       %input{type: 'hidden', name: 'type', value: 'followers'}
+      %input.amount{type: 'hidden', name: 'amount', value: nil}
+      %input.plan{name: 'plan', type: 'hidden', value: nil}
       .block-input-form-popup.first
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}

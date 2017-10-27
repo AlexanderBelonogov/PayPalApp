@@ -18,7 +18,9 @@ $(document).ready(function() {
   $('#likes .btn-pay').on('click', function(e) {
     var $popup = $('.popup');
     var amount = $(e.target).parent().find('.cost').text();
+    var plan = $(e.target).prev().prev().text();
     $popup.find('.amount').val(amount);
+    $popup.find('.plan').val(plan);
     $('#popup_send').val('Pay ' + amount + ' USD');
     $popup.show();
   });
@@ -30,9 +32,13 @@ $(document).ready(function() {
 
 // Show Followers popup
   $('#followers .btn-pay').on('click', function(e) {
+    var $popup = $('.popup-followers');
     var amount = $(e.target).parent().find('.cost').text();
+    var plan = $(e.target).prev().prev().text();
+    $popup.find('.amount').val(amount);
+    $popup.find('.plan').val(plan);
     $('#popup_send_followers').val('Pay ' + amount + ' USD');
-    $('.popup-followers').show();
+    $popup.show();
   });
 
 // Close all popups and clear content in it
