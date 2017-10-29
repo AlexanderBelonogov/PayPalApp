@@ -46,6 +46,8 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
+    mail (2.6.6)
+      mime-types (>= 1.16, < 4)
     method_source (0.9.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -79,6 +81,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   ianfleeton-paypal-express!
+  mail
   pry
   puma
   sinatra

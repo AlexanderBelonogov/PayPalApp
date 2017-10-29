@@ -15,4 +15,5 @@ gem 'haml'
 gem 'ianfleeton-paypal-express', github: 'ianfleeton/paypal-express', require: 'paypal/express'
 
 gem 'sysrandom'
+gem 'mail'
 gem 'pry'

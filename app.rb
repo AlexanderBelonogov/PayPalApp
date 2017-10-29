@@ -10,6 +10,9 @@ require 'sysrandom/securerandom'
 require './services/pay_pal_service'
 require 'sinatra/custom_logger'
 require 'logger'
+require 'mail'
+
+
 
 class PayPallApp < Sinatra::Base
   register Sinatra::ConfigFile
@@ -56,6 +59,17 @@ class PayPallApp < Sinatra::Base
   get '/rules' do
     @title = 'Terms of Service'
     haml :rules
+  end
+
+  post '/contact' do
+    required_params :message, :email
+    Mail.deliver do
+      from     params[:email]
+      to       'acebel@mail.ru'
+      subject  'Contact form was submitted'
+      body     params[:message]
+    end
+    redirect to '/'
   end
 
   post '/pay' do
