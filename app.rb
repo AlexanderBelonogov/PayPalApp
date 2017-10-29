@@ -63,12 +63,14 @@ class PayPallApp < Sinatra::Base
 
   post '/contact' do
     required_params :message, :email
-    Mail.deliver do
-      from     params[:email]
+    mail = Mail.new do
       to       'acebel@mail.ru'
       subject  'Contact form was submitted'
-      body     params[:message]
     end
+    mail[:from] = params[:email]
+    mail[:body] = params[:message]
+    mail.delivery_method :sendmail
+    mail.deliver!
     redirect to '/'
   end
 
