@@ -534,3 +534,17 @@ a {
   padding: 0 15px;
   position: relative;
 }
+
+.block-after-send {
+  color: #7f7f7f;
+  display: none;
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 24px;
+  padding: 175px 0;
+  text-align: center;
+}
+
+.block-after-send img {
+  width: 64px;
+  margin-bottom: 55px;
+}

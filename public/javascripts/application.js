@@ -144,7 +144,10 @@ $(document).ready(function() {
 
     var validEmail = validateContactEmail();
     var validText = validateContactText();
-    if (validEmail && validText) $('#contact-form').submit();
+    if (validEmail && validText) {
+      showMessageSentBlock();
+      $('#contact-form').submit();
+    }
   });
 
   // when focusout contact email
@@ -157,7 +160,14 @@ $(document).ready(function() {
     validateContactText();
   });
 
+
 // =================== FUNCTIONS ===================
+
+  // Show block after sending contact form
+  function showMessageSentBlock() {
+    $('#contact-form').hide();
+    $('#form-sent').show();
+  }
 
   // is email field valid for contact?
   function validateContactEmail() {
