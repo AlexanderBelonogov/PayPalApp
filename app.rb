@@ -80,8 +80,15 @@ class PayPallApp < Sinatra::Base
     # params[:count] - count followers or likes
     required_params :amount, :type, :plan
 
-    prefix = params[:type] == 'followers' ? params[:link_inst_followers] : params[:link_inst].join(" ")
-    description = DESCRIPTION % [params[:plan], prefix]
+    prefix = case params[:type]
+    when 'followers'
+      params[:link_inst_followers]
+    when 'likes'
+      params[:link_inst].join(" ")
+    else
+      '%s with %s photo(s)' % [params[:url], params[:count]]
+    end
+    description = DESCRIPTION % [params[:plan].squish, prefix]
 
     attr = {
       amount: params[:amount],

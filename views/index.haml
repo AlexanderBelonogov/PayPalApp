@@ -209,8 +209,10 @@
   .padding-left
   .block-form-popup
     .icon-close
-    %form#popup_form_2.form-popup{method: 'post'}
+    %form#popup_form_2.form-popup{action: 'pay', method: 'post'}
       %input#form_autolike_plan.plan{name: 'plan', type: 'hidden', value: '0'}
+      %input{type: 'hidden', name: 'type', value: 'auto'}
+      %input.amount{name: 'amount', type: 'hidden', value: '0'}
       .block-input-form-popup.validation-block
         .null-block.info
           %img.icon-info.important{src: 'images/icon-(17).svg'}

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  var count = ['1 000', '2 000', '5 000', '10 000', '20 000', '50 000', '100 000']
-  var price = ['2.90', '5.20', '10.90', '18.90', '32.90', '59.90', '109.90']
+  var count = ['1 000', '2 000', '5 000', '10 000', '20 000', '50 000', '100 000'];
+  var price = ['2.90', '5.20', '10.90', '18.90', '32.90', '59.90', '109.90'];
 
 // Show Followers or Likes block
   $('#check-radio-tools').on('change', function() {
@@ -26,8 +26,13 @@ $(document).ready(function() {
   });
 
 // Show popup for Likes as `Auto-Likes`
-  $('#likes .btn-pay-2').on('click', function() {
-    $('.popup-2').show();
+  $('#likes .btn-pay-2').on('click', function(e) {
+    var $popup = $('.popup-2');
+    var amount = $(e.target).parent().find('.cost').text();
+    var plan = $(e.target).prev().prev().text();
+    $popup.find('.amount').val(amount);
+    $popup.find('.plan').val(plan);
+    $popup.show();
   });
 
 // Show Followers popup
